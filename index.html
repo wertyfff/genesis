@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Genesis — Work, finished.</title>
+<meta name="description" content="Genesis is the intelligent workspace that takes work from intent to outcome.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Genesis">
+<meta property="og:title" content="Genesis — Work, finished.">
+<meta property="og:description" content="Genesis is the intelligent workspace that takes work from intent to outcome.">
+<meta property="og:image" content="https://wertyfff.github.io/genesis/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F3F3F1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 18 18%27%3E%3Crect width=%279%27 height=%279%27 fill=%27%23111214%27/%3E%3Crect x=%279%27 y=%279%27 width=%279%27 height=%279%27 fill=%27%23111214%27 opacity=%27.35%27/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<script>(function(){
+  try{var t=localStorage.getItem('genesis-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-site-theme',t)}catch(e){}
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+})();</script>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<header class="nav wrap" id="nav">
+  <a class="brand" href="#top" aria-label="Genesis home"><span class="mark" aria-hidden="true"><i></i><i></i></span>Genesis</a>
+  <nav class="links" aria-label="Sections">
+    <a href="#product">Product</a>
+    <a href="#principles">Principles</a>
+    <a href="#process">Process</a>
+    <a href="#control">Control</a>
+    <a href="#platform">Platform</a>
+    <a href="#pricing">Pricing</a>
+  </nav>
+  <div class="nav-r">
+    <button class="icon-btn" id="theme" type="button" aria-label="Toggle theme">
+      <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>
+    </button>
+    <a class="btn" href="#join"><span class="lab"><b>Early access</b><i>Early access</i></span></a>
+    <button class="icon-btn burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><span></span></button>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu">
+  <nav aria-label="Mobile">
+    <a href="#product">Product</a>
+    <a href="#principles">Principles</a>
+    <a href="#process">Process</a>
+    <a href="#control">Control</a>
+    <a href="#platform">Platform</a>
+    <a href="#pricing">Pricing</a>
+    <a href="about.html">Company</a>
+    <a href="#join">Early access</a>
+  </nav>
+  <span class="mono muted">Genesis · The intelligent workspace</span>
+</div>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-meta mono muted"><span>The intelligent workspace</span><span>Preview 0.3</span><span>Scroll</span></div>
+      <h1 class="d lines" id="h1"><span class="ln"><span>Work,</span></span><span class="ln"><span>finished.</span></span></h1>
+      <div class="hero-foot">
+        <p>Genesis takes a goal and returns a finished result: the research, the document, the code. You see each step and make the calls that matter.</p>
+        <div class="hero-cta">
+          <a class="tlink" href="#product">Watch it work ↓</a>
+          <a class="btn" href="#join"><span class="lab"><b>Request access</b><i>Request access</i></span><span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+    <figure class="wrap" style="margin:0">
+      <div class="plate hero-plate wipe first" data-photo="hero" data-kind="window" data-tone="stone" data-live="1"><canvas></canvas></div>
+      <figcaption class="cap mono muted"><span>Fig. 01 — First light</span><span>Daylight study, 09:40</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="statement wrap">
+    <span class="mono muted">Why Genesis</span>
+    <p id="stmt">Answers are cheap. Finished work is not. Genesis keeps your goal in view from the first question to the final file, and shows you every step along the way.</p>
+  </section>
+
+  <section id="product">
+    <div class="sh wrap">
+      <span class="mono muted">The workspace</span>
+      <h2 class="d rv">One place from intent to outcome</h2>
+    </div>
+    <div class="wrap">
+      <div class="plate prod wipe" data-photo="product" data-kind="slit" data-tone="graphite">
+        <canvas></canvas>
+        <div class="inner">
+          <div class="win" aria-label="Live demo of a task running">
+            <div class="w-head"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono">Demo run <span id="scn">1/3</span></span></div>
+            <div class="w-intent"><span class="mono">Intent</span><div class="w-text"><span id="typed"></span><span class="caret" aria-hidden="true"></span></div></div>
+            <ol class="w-steps" id="steps"></ol>
+            <div class="w-bar"><i id="bar"></i></div>
+            <div class="w-foot"><span class="w-res" id="result"><b>DONE</b><span id="resText"></span></span><span class="mono" id="clock">00:00</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="feats">
+        <div class="rv"><h3>Understands the goal</h3><p>It asks what the work is for before it starts, then holds that goal to the end.</p></div>
+        <div class="rv"><h3>Shows its work</h3><p>Sources, decisions and open questions stay visible. Nothing happens off-screen.</p></div>
+        <div class="rv"><h3>Hands over results</h3><p>Documents, code, models and decks you can use the moment they arrive.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hs" id="principles">
+    <div class="hs-sticky">
+      <div class="hs-top wrap mono muted"><span>Principles</span><span id="hsCount">Five rules</span></div>
+      <div class="hs-track wrap" id="hsTrack">
+        <div class="hs-intro">
+          <h2 class="d">Five rules behind everything we build</h2>
+          <p>Each one is a constraint we design against, from the model up to the smallest control on screen.</p>
+        </div>
+        <article class="panel"><div class="plate" data-photo="p-intelligence" data-kind="arch" data-tone="fog"><canvas></canvas></div><div class="panel-meta"><h3>Intelligence</h3><span class="mono muted">Core</span></div><p>Whole problems, end to end. Text is one of many forms a result can take.</p></article>
+        <article class="panel"><div class="plate" data-photo="p-continuity" data-kind="blinds" data-tone="sand"><canvas></canvas></div><div class="panel-meta"><h3>Continuity</h3><span class="mono muted">Memory</span></div><p>Projects run for weeks. Come back any time and pick up exactly where you left off.</p></article>
+        <article class="panel"><div class="plate" data-photo="p-creation" data-kind="window" data-tone="graphite"><canvas></canvas></div><div class="panel-meta"><h3>Creation</h3><span class="mono muted">Artifacts</span></div><p>The output is a finished thing: a study, a codebase change, a model, a deck.</p></article>
+        <article class="panel"><div class="plate" data-photo="p-control" data-kind="steps" data-tone="stone"><canvas></canvas></div><div class="panel-meta"><h3>Control</h3><span class="mono muted">Autonomy</span></div><p>You see what it uses, what it plans to do, and where your decision is needed.</p></article>
+        <article class="panel"><div class="plate" data-photo="p-simplicity" data-kind="slit" data-tone="fog"><canvas></canvas></div><div class="panel-meta"><h3>Simplicity</h3><span class="mono muted">Interface</span></div><p>One field to start. Tools appear when the task needs them, and not before.</p></article>
+      </div>
+      <div class="wrap"><div class="hs-prog"><i id="hsProg"></i></div></div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="sh wrap">
+      <span class="mono muted">Process</span>
+      <h2 class="d rv">Four steps. Every one visible.</h2>
+    </div>
+    <ol class="steps">
+      <li class="rv"><span class="n mono muted">01</span><h3>Understand</h3><p>Goal and definition of done come first. One precise question beats ten vague ones.</p><span class="x mono muted">Who is it for?</span></li>
+      <li class="rv"><span class="n mono muted">02</span><h3>Research</h3><p>The web, your files and project history. Every conclusion links to its evidence.</p><span class="x mono muted">48 sources</span></li>
+      <li class="rv"><span class="n mono muted">03</span><h3>Create</h3><p>The deliverable itself, opened beside the conversation and editable in place.</p><span class="x mono muted">10 slides</span></li>
+      <li class="rv"><span class="n mono muted">04</span><h3>Verify</h3><p>Checked against the goal from step one, with a plain note on what is still uncertain.</p><span class="x mono muted">1 open item</span></li>
+    </ol>
+  </section>
+
+  <section id="control">
+    <div class="sh wrap" style="border-top:0">
+      <span class="mono muted">Control</span>
+      <h2 class="d rv">You decide how much freedom it gets</h2>
+    </div>
+    <div class="ctrl wrap">
+      <div class="ctrl-l">
+        <span class="mono muted">Autonomy level</span>
+        <p class="lvl-name"><span id="lvlName">Assistant</span></p>
+        <p class="lvl-desc" id="lvlDesc"></p>
+        <div>
+          <label for="lvl" class="sr">Autonomy level</label>
+          <input class="range" id="lvl" type="range" min="0" max="3" step="1" value="1">
+          <div class="ticks mono" id="ticks"><button type="button">Advisor</button><button type="button">Assistant</button><button type="button">Operator</button><button type="button">Autopilot</button></div>
+        </div>
+      </div>
+      <ul class="perm ctrl-r" id="perm">
+        <li><span>Read project files</span><span class="chip"></span></li>
+        <li><span>Search the web</span><span class="chip"></span></li>
+        <li><span>Edit documents</span><span class="chip"></span></li>
+        <li><span>Run code</span><span class="chip"></span></li>
+        <li><span>Send email on your behalf</span><span class="chip"></span></li>
+        <li><span>Make payments</span><span class="chip"></span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="platform">
+    <div class="sh wrap">
+      <span class="mono muted">Platform</span>
+      <h2 class="d rv">One core. Six ways to work with it.</h2>
+    </div>
+    <div class="bento wrap">
+      <a class="card c1 rv" href="genesis.html" data-ink="light"><div class="plate" data-photo="b-genesis" data-kind="window" data-tone="ink"><canvas></canvas></div><div class="inner"><div class="card-top"><span class="mono">Workspace</span><span class="ar" aria-hidden="true">→</span></div><div><h3>Genesis</h3><p>The main environment. From a question to a finished result in one window.</p></div></div></a>
+      <a class="card c2 rv" href="studio.html"><div class="plate" data-photo="b-studio" data-kind="blinds" data-tone="stone"><canvas></canvas></div><div class="inner"><div class="card-top"><span class="mono">Projects</span><span class="ar" aria-hidden="true">→</span></div><div><h3>Studio</h3><p>Long-running work with shared, durable context.</p></div></div></a>
+      <a class="card c3 rv" href="code.html" data-ink="light"><div class="plate" data-photo="b-code" data-kind="steps" data-tone="graphite"><canvas></canvas></div><div class="inner"><div class="card-top"><span class="mono">Developers</span><span class="ar" aria-hidden="true">→</span></div><div><h3>Code</h3><p>An agent in your repository. Reads, edits, tests, explains.</p></div></div></a>
+      <a class="card c4 rv" href="teams.html"><div class="plate" data-photo="b-teams" data-kind="arch" data-tone="sand"><canvas></canvas></div><div class="inner"><div class="card-top"><span class="mono">Teams</span><span class="ar" aria-hidden="true">→</span></div><div><h3>Teams</h3><p>Shared projects, roles and a full audit trail.</p></div></div></a>
+      <a class="card c5 rv" href="api.html"><div class="plate" data-photo="b-api" data-kind="grid" data-tone="fog"><canvas></canvas></div><div class="inner"><div class="card-top"><span class="mono">Infrastructure</span><span class="ar" aria-hidden="true">→</span></div><div><h3>API</h3><p>The same core inside your own products.</p></div></div></a>
+      <a class="card c6 rv" href="memory.html" data-ink="light"><div class="plate" data-photo="b-memory" data-kind="slit" data-tone="ink"><canvas></canvas></div><div class="inner"><div class="card-top"><span class="mono">Context</span><span class="ar" aria-hidden="true">→</span></div><div><h3>Memory</h3><p>Files and decisions it keeps, on rules you set.</p></div></div></a>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="sh wrap">
+      <span class="mono muted">Pricing</span>
+      <div class="sh-b">
+        <h2 class="d rv">Start free. Keep everything you build.</h2>
+        <div class="bill" role="group" aria-label="Billing period">
+          <button type="button" data-b="m" aria-pressed="false">Monthly</button>
+          <button type="button" data-b="y" aria-pressed="true">Yearly<em>2 months free</em></button>
+        </div>
+      </div>
+    </div>
+    <div class="plans wrap">
+      <article class="plan rv">
+        <h3>Personal</h3>
+        <div class="price">$0 <span class="per">forever</span></div>
+        <p class="plan-note">Everything you need to see what Genesis can do.</p>
+        <ul><li>Everyday tasks and research</li><li>3 active projects</li><li>Project memory for 30 days</li><li>Advisor and Assistant modes</li></ul>
+        <a class="btn line" href="#join" data-plan="Personal"><span class="lab"><b>Start free</b><i>Start free</i></span><span class="arr">→</span></a>
+      </article>
+
+      <article class="plan pro rv">
+        <div class="plate" data-kind="window" data-tone="ink" data-live="1" data-photo="pro"><canvas></canvas></div>
+        <div class="pro-top"><h3>Pro</h3><span class="pill"><i></i>Chosen by most people</span></div>
+        <div class="price"><span class="old" id="proOld">$24</span><span class="pv" id="proPrice" data-m="24" data-y="16">$16</span><span class="per" id="proPer">per month,<br>billed yearly</span></div>
+        <div class="offer"><span><b>First month free.</b> No card needed to start.</span><span class="save" id="proSave">Save $96 a year</span></div>
+        <ul><li>Unlimited projects</li><li>Long-term memory you control</li><li>Code, data and file tools</li><li>All four autonomy levels</li><li>Priority speed at peak hours</li><li>Early access to new features</li></ul>
+        <a class="btn" href="#join" data-plan="Pro"><span class="lab"><b>Start your free month</b><i>Start your free month</i></span><span class="arr">→</span></a>
+        <p class="plan-note">Cancel in two clicks. Full refund within 30 days.</p>
+      </article>
+
+      <article class="plan rv">
+        <h3>Teams</h3>
+        <div class="price"><span class="pv" data-m="36" data-y="29">$29</span> <span class="per">per seat / mo</span></div>
+        <p class="plan-note">For companies that work on shared projects.</p>
+        <ul><li>Everything in Pro</li><li>Shared projects and knowledge</li><li>Roles, permissions, SSO</li><li>Audit trail and admin console</li></ul>
+        <a class="btn line" href="contact.html#sales"><span class="lab"><b>Talk to sales</b><i>Talk to sales</i></span><span class="arr">→</span></a>
+      </article>
+    </div>
+    <div class="incl wrap mono muted"><span>Your data is never used for training</span><span>Export everything, any time</span><span>Encrypted in transit and at rest</span></div>
+  </section>
+
+  <section id="join" class="wrap">
+    <div class="plate close wipe" data-kind="blinds" data-tone="ink" data-photo="close">
+      <canvas></canvas>
+      <div class="inner">
+        <span class="mono" style="color:rgba(241,241,238,.7)">Early access</span>
+        <h2 class="d">Tell it what needs to be done.</h2>
+        <form class="form nf" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="company_site" data-ok="You are on the list. We will email you when your place is ready." novalidate>
+          <input type="hidden" name="form-name" value="waitlist">
+          <input type="hidden" name="plan" id="plan" value="">
+          <input type="hidden" name="billing" id="billing" value="yearly">
+          <p class="hp"><label>Leave this empty <input name="company_site" tabindex="-1" autocomplete="off"></label></p>
+          <label for="email" class="sr">Work email</label>
+          <input id="email" name="email" type="email" required data-label="your email" placeholder="Your work email" autocomplete="email">
+          <button class="btn" type="submit"><span class="lab"><b>Join the waitlist</b><i>Join the waitlist</i></span><span class="arr">→</span></button>
+        </form>
+        <p class="plan-note-sel mono" id="planNote" hidden></p>
+        <p class="form-msg mono" id="msg" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq wrap" id="faq">
+    <div class="faq-h"><h2 class="d">Questions</h2></div>
+    <div class="faq-l">
+      <details><summary>How is Genesis different from a chatbot?<span class="pm" aria-hidden="true"></span></summary><p class="ans">A chatbot replies to messages. Genesis works toward an outcome: it plans the task, uses tools, produces files and checks the result against your goal. The conversation is how you steer it, and the finished work is what you get.</p></details>
+      <details><summary>What kind of work can it do?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Research reports with sources, documents and briefs, slide decks, spreadsheets and financial models, data analysis, and changes to real codebases. It works with the files you give it, and every result opens next to the conversation so you can edit it directly.</p></details>
+      <details><summary>What does it remember about me?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Only what you allow. Memory is organised by project, so a client project never leaks into a personal one. You can see every remembered item, delete any of them, or switch memory off entirely.</p></details>
+      <details><summary>Can it act without asking?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Only within the autonomy level you choose. Reading and research can run on their own; sending email, publishing or spending money always waits for your confirmation unless you change that yourself.</p></details>
+      <details><summary>Is my data used for training?<span class="pm" aria-hidden="true"></span></summary><p class="ans">No. Your projects, files and conversations are not used to train models. This is the default on every plan, including the free one.</p></details>
+      <details><summary>How is my data protected?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Data is encrypted in transit and at rest. Teams get single sign-on, role-based permissions and a full audit trail of what Genesis did and who approved it.</p></details>
+      <details><summary>Is there a free trial?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Personal is free with no time limit. Pro starts with a free first month and needs no card to begin. If Pro is not for you, you drop back to Personal and keep your projects.</p></details>
+      <details><summary>Can I cancel any time?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Yes, in two clicks from settings. Yearly plans are fully refunded within 30 days. Whatever you cancel, you can export all your projects and files first.</p></details>
+      <details><summary>Which languages does it work in?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Genesis reads and writes in most major languages. You can mix languages inside one project, for example research sources in German and a final report in English.</p></details>
+      <details><summary>When can I start?<span class="pm" aria-hidden="true"></span></summary><p class="ans">Access opens in waves. Join the waitlist and we will email you when your place is ready. Waitlist members get the free Pro month automatically.</p></details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div class="f-cols">
+    <p class="f-lead">The intelligent workspace that takes work from intent to outcome.</p>
+    <div class="f-col"><h4 class="mono muted">Product</h4><ul><li><a href="genesis.html">Genesis</a></li><li><a href="studio.html">Studio</a></li><li><a href="code.html">Code</a></li><li><a href="teams.html">Teams</a></li><li><a href="api.html">API</a></li><li><a href="memory.html">Memory</a></li></ul></div>
+    <div class="f-col"><h4 class="mono muted">Company</h4><ul><li><a href="about.html">About</a></li><li><a href="research.html">Research</a></li><li><a href="careers.html">Careers</a></li><li><a href="press.html">Press</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="f-col"><h4 class="mono muted">Resources</h4><ul><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><button class="f-cookie" type="button" data-cookie-settings>Cookie settings</button></li></ul></div>
+  </div>
+  <p class="wordmark" aria-hidden="true"><span>G</span><span>e</span><span>n</span><span>e</span><span>s</span><span>i</span><span>s</span></p>
+  <div class="f-bot mono muted"><span>© 2026 Genesis</span><span>Concept project · fictional company</span></div>
+</footer>
+
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie preferences" hidden>
+  <p><b>Cookies, briefly</b>We use essential cookies to run this site. With your permission we also use analytics to see which pages help people most. <a href="privacy.html#cookies">Details</a></p>
+  <div class="cookie-b">
+    <button class="btn line" type="button" data-c="essential"><span class="lab"><b>Essential only</b><i>Essential only</i></span></button>
+    <button class="btn" type="button" data-c="all"><span class="lab"><b>Accept all</b><i>Accept all</i></span></button>
+  </div>
+</div>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
