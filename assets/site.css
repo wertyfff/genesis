@@ -474,3 +474,26 @@ footer{border-top:1px solid var(--line);padding-top:clamp(40px,5vw,72px);overflo
   .swatches{grid-template-columns:repeat(3,minmax(0,1fr))}
   .kv li{grid-template-columns:1fr;gap:4px}
 }
+
+/* ================= phones: comfortable tap targets ================= */
+@media (max-width:900px){
+  .brand{padding-block:8px}
+  .tlink{padding-block:12px}
+  .f-col ul{gap:0}
+  .f-col a,.f-cookie{display:inline-block;padding-block:9px}
+  .ticks button{padding-block:13px}
+  .range{height:44px}
+  .range::-webkit-slider-thumb{width:26px;height:26px;margin-top:-12.5px}
+  .range::-moz-range-thumb{width:26px;height:26px}
+  .bill button{padding:12px 18px}
+  .f-bot{flex-direction:column}
+  .hero-meta span:nth-child(3){display:none}
+  .hero-meta{grid-template-columns:1fr}
+}
+/* hover effects only where a real pointer hovers; on touch they would stick after a tap */
+@media (hover:none){
+  .card:hover .plate canvas,.next:hover .plate canvas{transform:none}
+  .steps li:hover::before,.rowlist a.r:hover::before{transform:scaleY(0)}
+  .steps li:hover h3{transform:none}
+  .wordmark:hover span{transform:none}
+}

@@ -109,7 +109,8 @@
   }
   function onScroll(){stmtScroll();hsScroll()}
   addEventListener('scroll',onScroll,{passive:true});
-  addEventListener('resize',function(){hsSize();onScroll();sizePlates()});
+  var rsT;
+  addEventListener('resize',function(){clearTimeout(rsT);rsT=setTimeout(function(){hsSize();onScroll();sizePlates()},120)});
 
   /* ---------- light plates ---------- */
   (function(){ /* film grain overlay, generated once */
@@ -191,12 +192,18 @@
     return {el:el,c:c,ctx:c.getContext('2d'),kind:el.dataset.kind,tone:el.dataset.tone,live:!!el.dataset.live,h:!!el.closest('.hs-track'),
             p:-1,vis:false,seed:Math.random()*6,ox:Math.random()*256|0,oy:Math.random()*256|0};
   });
+  /* phones and tablets: each scene is drawn once when it appears, at a lighter resolution,
+     with no scroll-linked redraws (keeps scrolling smooth and saves battery) */
+  var liteMQ=matchMedia('(max-width: 900px), (pointer: coarse)'),lite=liteMQ.matches;
   function sizePlates(){
+    lite=liteMQ.matches;
     var dpr=Math.min(devicePixelRatio||1,2);
     plates.forEach(function(pl){
-      var r=pl.el.getBoundingClientRect(),sc=Math.min(dpr*.75,1800/Math.max(1,r.width));
+      var r=pl.el.getBoundingClientRect(),sc=lite?Math.min(Math.max(dpr*.5,.75),900/Math.max(1,r.width)):Math.min(dpr*.75,1800/Math.max(1,r.width));
       var w=Math.max(1,Math.round(r.width*sc)),h=Math.max(1,Math.round(r.height*sc));
-      if(pl.c.width!==w||pl.c.height!==h){pl.c.width=w;pl.c.height=h;pl.p=-1}
+      /* ignore small height-only changes, e.g. the mobile address bar showing and hiding */
+      if(Math.abs(pl.c.width-w)<2&&Math.abs(pl.c.height-h)<=pl.c.height*.15) return;
+      pl.c.width=w;pl.c.height=h;pl.p=-1;
     });
   }
   var pio=new IntersectionObserver(function(es){es.forEach(function(e){plates.forEach(function(x){if(x.el===e.target)x.vis=e.isIntersecting})})},{rootMargin:'120px'});
@@ -207,6 +214,7 @@
     var t=now/1000,vh=innerHeight;
     for(var i=0;i<plates.length;i++){
       var pl=plates[i];if(!pl.vis||pl.el.classList.contains('has-photo')) continue;
+      if(lite){if(pl.p<0){pl.p=.45;render(pl)}continue}
       var r=pl.el.getBoundingClientRect();
       var p=(vh-r.top)/(vh+r.height);
       if(pl.h&&hsOn) p=1-(r.left+r.width/2)/innerWidth;
@@ -215,7 +223,7 @@
       if(Math.abs(p-pl.p)>.0015){pl.p=p;render(pl)}
     }
   }
-  plates.forEach(function(pl){pl.p=.5;render(pl)});
+  if(!lite) plates.forEach(function(pl){pl.p=.5;render(pl)});
   requestAnimationFrame(tick);
   hsSize();onScroll();
   addEventListener('load',function(){hsSize();sizePlates();onScroll()});
